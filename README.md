@@ -1,6 +1,6 @@
 # Turborepo (NestJS + Prisma + NextJS + Tailwind + Typescript + Jest) Starter
 
-This is SaaS starter pack with monorepo approach. It comes with the following features. 
+This is fullstack turborepo starter. It comes with the following features. 
 
 - ✅ Turborepo 
 - ✅ Nestjs 
