@@ -12,7 +12,7 @@ module.exports = {
       default: `nps prepare.web prepare.api`,
       web: `yarn`,
       api: `nps prepare.docker prisma.migrate.dev`,
-      docker: "docker-compose up -d",
+      docker: "docker compose up -d",
       ci: {
         web: `npx turbo prune --scope=web && cd out && yarn install --frozen-lockfile`,
         api: `npx turbo prune --scope=api && cd out && yarn install --frozen-lockfile && nps prisma.generate`,
