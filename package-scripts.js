@@ -20,8 +20,8 @@ module.exports = {
     },
     test: {
       default: `nps test.web test.api`,
-      web: `cd ${webPath} && yarn test:watch`,
-      api: `cd ${apiPath} && yarn test:watch`,
+      web: `cd ${webPath} && yarn test`,
+      api: `cd ${apiPath} && yarn test`,
       ci: {
         default: `nps test.ci.web test.ci.api`,
         web: `cd ${ciWebPath} && yarn test:ci`,
@@ -29,7 +29,7 @@ module.exports = {
       },
       watch: {
         default: `nps test.watch.web test.watch.api`,
-        web: `cd ${webPath} && yarn test:ci`,
+        web: `cd ${webPath} && yarn test:watch`,
         api: `cd ${apiPath} && yarn test:watch`,
       },
     },
