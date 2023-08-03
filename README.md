@@ -50,13 +50,18 @@ npm i -g nps
 - Make sure docker and docker-compose are
  installed. Refer to docs for your operating system.
 
+### Configure Environment
+- Frontend 
+    - `cd apps/web && cp .env.example .env`
+- Backend 
+    - `cd apps/api && cp .env.example .env`
+
 ### Install Dependencies
 Make sure you are at root of the project and just run 
 
 ```
 nps prepare
 ```
-
 ### Build
 
 To build all apps and packages, run the following command at the root of project:

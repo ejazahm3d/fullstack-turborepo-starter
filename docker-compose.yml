@@ -14,7 +14,7 @@ services:
       - "host.docker.internal:host-gateway"
 
   postgres:
-    image: postgres:14
+    image: postgres:15
     environment:
       - POSTGRES_DB=mydb
       - POSTGRES_USER=test

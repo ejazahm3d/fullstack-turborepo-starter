@@ -12,7 +12,7 @@ module.exports = {
       default: `nps prepare.web prepare.api`,
       web: `yarn`,
       api: `nps prepare.docker prisma.migrate.dev`,
-      docker: "docker-compose up -d",
+      docker: "docker compose up -d",
       ci: {
         web: `npx turbo prune --scope=web && cd out && yarn install --frozen-lockfile`,
         api: `npx turbo prune --scope=api && cd out && yarn install --frozen-lockfile && nps prisma.generate`,
@@ -20,8 +20,8 @@ module.exports = {
     },
     test: {
       default: `nps test.web test.api`,
-      web: `cd ${webPath} && yarn test:watch`,
-      api: `cd ${apiPath} && yarn test:watch`,
+      web: `cd ${webPath} && yarn test`,
+      api: `cd ${apiPath} && yarn test`,
       ci: {
         default: `nps test.ci.web test.ci.api`,
         web: `cd ${ciWebPath} && yarn test:ci`,
@@ -29,7 +29,7 @@ module.exports = {
       },
       watch: {
         default: `nps test.watch.web test.watch.api`,
-        web: `cd ${webPath} && yarn test:ci`,
+        web: `cd ${webPath} && yarn test:watch`,
         api: `cd ${apiPath} && yarn test:watch`,
       },
     },

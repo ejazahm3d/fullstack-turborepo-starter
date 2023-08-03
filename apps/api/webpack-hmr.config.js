@@ -9,6 +9,7 @@ module.exports = function (options, webpack) {
     externals: [
       nodeExternals({
         allowlist: ['webpack/hot/poll?100'],
+        modulesDir: '../../node_modules',
       }),
     ],
     plugins: [
